@@ -1,0 +1,17 @@
+.first_split_cont {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 5rem;
+  width: 90%;
+}
+
+.first_split_cont .big_solo_cont {
+  width: 50%;
+}
+
+.three_cont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}

@@ -1,0 +1,6 @@
+.gridDiv {
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}

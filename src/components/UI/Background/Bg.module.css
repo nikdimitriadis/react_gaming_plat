@@ -1,0 +1,16 @@
+.bg_container {
+  position: relative;
+}
+
+.bg_container img {
+  width: 100%;
+  object-fit: cover;
+}
+.bg_container h1 {
+  position: absolute;
+  text-transform: uppercase;
+  max-width: 400px;
+  top: 70%;
+  transform: translateY(-70%);
+  left: 3%;
+}

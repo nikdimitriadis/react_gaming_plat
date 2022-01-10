@@ -1,0 +1,21 @@
+.bigDiv {
+  display: flex;
+  max-width: 800px;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+  font-size: 2rem;
+}
+
+.bigDiv .rel {
+  position: relative;
+}
+
+.bigDiv .rel div {
+  position: absolute;
+}
+
+.bigDiv .rel div option,
+.bigDiv .rel div label,
+.bigDiv .rel div select {
+  font-size: 2rem;
+}

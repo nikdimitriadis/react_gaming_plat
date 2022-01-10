@@ -1,0 +1,13 @@
+.cate_icon_cont {
+  background: #102130;
+  border-radius: 15px;
+  padding: 6px 12px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ff4654;
+}
+
+.cate_icon_cont img {
+  width: 100%;
+  object-fit: cover;
+}

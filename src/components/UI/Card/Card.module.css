@@ -1,0 +1,5 @@
+.radius {
+  border-radius: 12px;
+  overflow: hidden;
+  width: max-content;
+}

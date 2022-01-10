@@ -1,0 +1,11 @@
+/* ! TODO: font-size klp */
+
+.redButton {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1.2rem 2.4rem;
+  background: #ff4654;
+  border-radius: 12px;
+}

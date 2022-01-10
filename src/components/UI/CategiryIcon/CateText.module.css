@@ -1,0 +1,18 @@
+/* .cate_icon_cont {
+  background: #102130;
+  border-radius: 15px;
+  padding: 6px 12px;
+  border: 1px solid #ff4654;
+} */
+
+.cate_text_cont {
+  width: max-content;
+  font-size: 2rem;
+  color: white;
+  background: #102130;
+  border-radius: 15px;
+  padding: 6px 12px;
+  border: 1px solid #ff4654;
+  margin: 0;
+  font-weight: 500;
+}

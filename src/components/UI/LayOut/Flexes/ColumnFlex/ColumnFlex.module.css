@@ -1,0 +1,7 @@
+.col_cont {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: auto;
+  margin-bottom: 7rem;
+}
