@@ -95,7 +95,7 @@ const Details = () => {
             <div className={styles.dbleImg}>
               <img
                 src={dataFromApi.screenshots[1].image}
-                alt="big_img_from_game"
+                alt="big img from game"
               />
               <img
                 src={dataFromApi.screenshots[2].image}
