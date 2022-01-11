@@ -77,7 +77,11 @@ const Details = () => {
                   {dataFromApi.genre}
                 </div>
                 <div>
-                  <a href={dataFromApi.freetogame_profile_url} target="_blank">
+                  <a
+                    href={dataFromApi.freetogame_profile_url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     PLAY NOW
                   </a>
                 </div>
@@ -89,8 +93,14 @@ const Details = () => {
             </div>
 
             <div className={styles.dbleImg}>
-              <img src={dataFromApi.screenshots[1].image} alt="action1" />
-              <img src={dataFromApi.screenshots[2].image} alt="action2" />
+              <img
+                src={dataFromApi.screenshots[1].image}
+                alt="big_img_from_game"
+              />
+              <img
+                src={dataFromApi.screenshots[2].image}
+                alt="small image from game"
+              />
             </div>
 
             <footer className={styles.footer}>

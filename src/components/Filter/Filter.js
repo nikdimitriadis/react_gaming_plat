@@ -35,37 +35,40 @@ const Filter = (props) => {
   };
 
   //   !!!
-  const test = useCallback((a, b, c) => {
-    const params = {
-      platform: "",
-      category: "",
-      sort: "",
-    };
-    if (a !== "") {
-      params.platform = a;
-    }
-    if (a === "" || a === null) {
-      delete params.platform;
-    }
-    if (b !== "") {
-      params.category = b;
-    }
+  const test = useCallback(
+    (a, b, c) => {
+      const params = {
+        platform: "",
+        category: "",
+        sort: "",
+      };
+      if (a !== "") {
+        params.platform = a;
+      }
+      if (a === "" || a === null) {
+        delete params.platform;
+      }
+      if (b !== "") {
+        params.category = b;
+      }
 
-    if (b === "" || b === null) {
-      delete params.category;
-    }
-    if (c !== "") {
-      params.sort = c;
-    }
-    if (c === "" || c === null) {
-      delete params.sort;
-    }
+      if (b === "" || b === null) {
+        delete params.category;
+      }
+      if (c !== "") {
+        params.sort = c;
+      }
+      if (c === "" || c === null) {
+        delete params.sort;
+      }
 
-    navigate({
-      pathname: "/allg",
-      search: `?${createSearchParams(params)}`,
-    });
-  }, []);
+      navigate({
+        pathname: "/allg",
+        search: `?${createSearchParams(params)}`,
+      });
+    },
+    [navigate]
+  );
   //   !!!!
 
   const importData = useCallback(async (a, b, c) => {
