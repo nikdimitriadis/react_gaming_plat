@@ -23,12 +23,14 @@ const HomeThird = () => {
 
   content = Object.keys(dataFromApi)
     ?.filter((item) => {
-      if (
+      // if
+      return (
         dataFromApi[item].platform.startsWith("Web") &&
         dataFromApi[item].release_date.startsWith("201")
-      ) {
-        return item;
-      }
+      );
+      //  {
+      //   return item;
+      // }
     })
     .reverse()
     .slice(0, 4)

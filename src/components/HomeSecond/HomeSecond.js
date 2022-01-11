@@ -24,12 +24,14 @@ const HomeSecond = () => {
 
   if (dataFromApi.length > 0) {
     content = Object.keys(dataFromApi)?.filter((item) => {
-      if (
+      // if (
+      return (
         dataFromApi[item].platform.startsWith("PC") &&
         dataFromApi[item].release_date.startsWith("2021")
-      ) {
-        return item;
-      }
+      );
+      // ) {
+      // return item;
+      // }
     });
 
     bigContent = content.slice(0, 1).map((item, index) => {
