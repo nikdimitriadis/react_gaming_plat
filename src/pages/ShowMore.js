@@ -30,11 +30,13 @@ const ShowMore = () => {
 
   content = Object.keys(dataFromApi)
     ?.filter((item) => {
-      if (
-        dataFromApi[item].platform.toLowerCase().startsWith(`${params.cat}`)
-      ) {
-        return item;
-      }
+      // if
+      return dataFromApi[item].platform
+        .toLowerCase()
+        .startsWith(`${params.cat}`);
+      // {
+      //   return item;
+      // }
     })
     .map((item) => {
       return (
