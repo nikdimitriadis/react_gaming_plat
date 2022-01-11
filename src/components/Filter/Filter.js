@@ -15,8 +15,8 @@ const Filter = (props) => {
   // const [cat, setCat] = useState("");
   // const [sSort, setSsort] = useState("");
 
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoading] = useState(false);
+  // const [error, setError] = useState(null);
+  // const [isLoaded, setIsLoading] = useState(false);
   const [fetchedData, setFetchedData] = useState([]);
 
   const platflorHandler = (e) => {
@@ -44,20 +44,20 @@ const Filter = (props) => {
     if (a !== "") {
       params.platform = a;
     }
-    if (a == "" || a == null) {
+    if (a === "" || a === null) {
       delete params.platform;
     }
     if (b !== "") {
       params.category = b;
     }
 
-    if (b == "" || b == null) {
+    if (b === "" || b === null) {
       delete params.category;
     }
     if (c !== "") {
       params.sort = c;
     }
-    if (c == "" || c == null) {
+    if (c === "" || c === null) {
       delete params.sort;
     }
 
@@ -81,8 +81,8 @@ const Filter = (props) => {
     if (c) {
       thirdSort = "&" + c;
     }
-    setIsLoading(true);
-    setError(null);
+    // setIsLoading(true);
+    // setError(null);
 
     try {
       const response = await fetch(
@@ -105,12 +105,12 @@ const Filter = (props) => {
 
       setFetchedData(() => data);
     } catch (e) {
-      setIsLoading(false);
-      setError(e.message);
+      // setIsLoading(false);
+      // setError(e.message);
       // console.error(e);
     }
 
-    setIsLoading(false);
+    // setIsLoading(false);
   }, []);
 
   useEffect(() => {
