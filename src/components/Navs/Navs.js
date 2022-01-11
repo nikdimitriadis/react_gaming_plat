@@ -83,7 +83,7 @@ const Navs = () => {
             <li>
               <Link to="/">
                 <div className={styles.redLink}>
-                  <img src={home} />
+                  <img src={home} alt="home image" />
                   <p className={styles[`${isX ? "parag" : "unPlay"}`]}>Home</p>
                 </div>
               </Link>
@@ -91,7 +91,7 @@ const Navs = () => {
             <li>
               <Link to="/allg">
                 <div className={styles.redLink}>
-                  <img src={game} />
+                  <img src={game} alt="gameboy image" />
                   <p className={styles[`${isX ? "parag" : "unPlay"}`]}>
                     All Games
                   </p>
@@ -101,7 +101,7 @@ const Navs = () => {
             <li>
               <Link to="/recenadd">
                 <div className={styles.redLink}>
-                  <img src={plus} />
+                  <img src={plus} alt="current games image" />
                   <p className={styles[`${isX ? "parag" : "unPlay"}`]}>
                     Recently Added
                   </p>
@@ -112,7 +112,7 @@ const Navs = () => {
           <div></div>
         </div>
         <div className={styles.logo}>
-          <div className={styles["logo_flex"]}>
+          <div className={styles["logo flex"]}>
             <div>
               <img src={logo} alt="sss" />
             </div>
