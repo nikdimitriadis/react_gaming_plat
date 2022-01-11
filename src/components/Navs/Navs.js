@@ -26,9 +26,11 @@ const Navs = () => {
     if (fetchCtx.fetchedData.length > 0) {
       if (e.target.value.length > 0) {
         listOfTitles = fetchCtx.fetchedData.filter((obj) => {
-          if (obj.title.includes(e.target.value)) {
-            return obj;
-          }
+          // if (
+          return obj.title.includes(e.target.value);
+          // ) {
+          // return obj;
+          // }
         });
       }
     }
