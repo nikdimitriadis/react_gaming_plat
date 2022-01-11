@@ -95,12 +95,9 @@ const Details = () => {
             <div className={styles.dbleImg}>
               <img
                 src={dataFromApi.screenshots[1].image}
-                alt="big img from game"
+                alt="live game action"
               />
-              <img
-                src={dataFromApi.screenshots[2].image}
-                alt="small image from game"
-              />
+              <img src={dataFromApi.screenshots[2].image} alt="single player" />
             </div>
 
             <footer className={styles.footer}>
