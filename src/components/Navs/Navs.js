@@ -112,7 +112,7 @@ const Navs = () => {
           <div></div>
         </div>
         <div className={styles.logo}>
-          <div className={styles["logo flex"]}>
+          <div className={styles["logo_flex"]}>
             <div>
               <img src={logo} alt="sss" />
             </div>

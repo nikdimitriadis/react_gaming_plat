@@ -19,3 +19,13 @@
 .bigDiv .rel div select {
   font-size: 2rem;
 }
+
+/* .bigDiv .rel div select {
+  margin-top: 6px;
+  background: #ff4654;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+} */
