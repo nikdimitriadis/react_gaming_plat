@@ -27,7 +27,7 @@ const Navs = () => {
       if (e.target.value.length > 0) {
         listOfTitles = fetchCtx.fetchedData.filter((obj) => {
           // if (
-          return obj.title.includes(e.target.value);
+          return obj.title.toLowerCase().includes(e.target.value.toLowerCase());
           // ) {
           // return obj;
           // }

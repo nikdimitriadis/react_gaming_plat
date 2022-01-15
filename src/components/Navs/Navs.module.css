@@ -35,6 +35,7 @@
   border-radius: 12px;
   overflow: auto;
   z-index: 100;
+  padding: 1rem;
 }
 
 .searchIn a {
