@@ -1,71 +1,17 @@
-# Getting Started with Create React App
+website link: https://nickstestplat.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+api used: https://www.freetogame.com/api-doc
 
-## Available Scripts
+Website's Purpose: 
 
-In the project directory, you can run:
+The website is made for gaming fans. On the first page the users can see the top 4 games for the 3 main categories that are: Recently Added, Top 4 Games for PC in 2021, Top 4 Games for Browser. Clicking on "Show More" button they can expand the list to see more games of each category. 
 
-### `npm start`
+For each game the users can read the details about it and are able to see the Minimum System Requirements or any other additional information. Also it is possible to navigate to third party website if they click on "Play Now" button.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The navigation bar and the search tool appears on every website page to ease user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+On the second page (All Games) the users can see all games from each category. They can also filter the type of the games that they are looking for.
 
-### `npm test`
+On the third page (Recently Added) the users can see the last 30 recently added games.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# react_game_platform
+The website is made with React and it is for screens bigger than 1400px. The design of this website was not the first priority, that's why this website is not responsive. My purpose was to practise my React skills and to think more reactive. One of my goals was the dynamic url, that changes according to the filter changes. When the user sends the url to another user, the filtered result and the values of filtered dropdown list will remain exactly the same as the initial user's choice.
