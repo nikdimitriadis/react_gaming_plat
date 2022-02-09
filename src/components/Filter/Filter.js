@@ -122,8 +122,6 @@ const Filter = (props) => {
 
   props.func(fetchedData);
 
-  //   console.log(fetchedData);
-
   return (
     <>
       <div className={styles.bigDiv}>
@@ -137,18 +135,8 @@ const Filter = (props) => {
               id="platform"
             >
               <option value="">Choose Platform</option>
-              <option
-                // selected={isFiltering === "platform=browser"}
-                value="platform=browser"
-              >
-                Web Broweser
-              </option>
-              <option
-                // selected={isFiltering === "platform=pc"}
-                value="platform=pc"
-              >
-                PC (Windows)
-              </option>
+              <option value="platform=browser">Web Broweser</option>
+              <option value="platform=pc">PC (Windows)</option>
             </select>
           </div>
         </div>
