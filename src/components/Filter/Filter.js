@@ -75,6 +75,8 @@ const Filter = (props) => {
     if (c) {
       thirdSort = "&" + c;
     }
+    // setIsLoading(true);
+    // setError(null);
 
     try {
       const response = await fetch(
@@ -99,15 +101,17 @@ const Filter = (props) => {
     } catch (e) {
       // setIsLoading(false);
       // setError(e.message);
-      // console.error(e);
+      console.error(e);
     }
+
+    // setIsLoading(false);
   }, []);
+
+  props.func(fetchedData);
 
   useEffect(() => {
     importData(isFiltering, isFilteringSecond, isFilteringSort);
   }, [importData, isFiltering, isFilteringSecond, isFilteringSort]);
-
-  props.func(fetchedData);
 
   return (
     <>

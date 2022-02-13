@@ -21,31 +21,36 @@ const AllGames = () => {
   // }
 
   const dataFunction = (data) => {
-    setDataFilter(() => data);
+    setDataFilter(data);
   };
 
+  // error handling gia category fighting + web
+  let data;
+  if (dataFilter.status === 0) {
+    data = <p>{dataFilter.status_message}</p>;
+  } else {
+    data = dataFilter.map((item) => {
+      return (
+        <FirstCard
+          path={item.id}
+          key={item.id}
+          url={item.thumbnail}
+          title={item.title}
+          genre={item.genre}
+          platform={item.platform}
+          description={item.short_description}
+        />
+      );
+    });
+  }
+
   // !if can be deleted
-  // if (fetchCtx.fetchedData.length > 0) {
   content = (
     <>
       <Filter func={dataFunction} />
       <h3>All Games</h3>
 
-      <RowFlex>
-        {dataFilter.map((item) => {
-          return (
-            <FirstCard
-              path={item.id}
-              key={item.id}
-              url={item.thumbnail}
-              title={item.title}
-              genre={item.genre}
-              platform={item.platform}
-              description={item.short_description}
-            />
-          );
-        })}
-      </RowFlex>
+      <RowFlex>{data}</RowFlex>
     </>
   );
   // }

@@ -184,7 +184,7 @@ const Details = () => {
           left: "45%",
         }}
       >
-        cant find that game
+        That game does not exist!
       </p>
     );
   }
