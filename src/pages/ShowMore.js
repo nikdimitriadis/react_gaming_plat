@@ -26,28 +26,23 @@ const ShowMore = () => {
     content = <p>{fetchCtx.error}</p>;
   }
 
-  const dataFromApi = fetchCtx?.fetchedData ?? {};
+  const dataFromApi = fetchCtx.fetchedData;
 
-  content = Object.keys(dataFromApi)
-    ?.filter((item) => {
-      // if
-      return dataFromApi[item].platform
-        .toLowerCase()
-        .startsWith(`${params.cat}`);
-      // {
-      //   return item;
-      // }
+  content = dataFromApi
+    .filter((item) => {
+      // filter for correct platform
+      return item.platform.toLowerCase().startsWith(`${params.cat}`);
     })
     .map((item) => {
       return (
         <FirstCard
-          path={dataFromApi[item].id}
-          key={dataFromApi[item].id}
-          url={dataFromApi[item].thumbnail}
-          title={dataFromApi[item].title}
-          genre={dataFromApi[item].genre}
-          platform={dataFromApi[item].platform}
-          description={dataFromApi[item].short_description}
+          path={item.id}
+          key={item.id}
+          url={item.thumbnail}
+          title={item.title}
+          genre={item.genre}
+          platform={item.platform}
+          description={item.short_description}
         />
       );
     });

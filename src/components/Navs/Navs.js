@@ -26,11 +26,7 @@ const Navs = () => {
     if (fetchCtx.fetchedData.length > 0) {
       if (e.target.value.length > 0) {
         listOfTitles = fetchCtx.fetchedData.filter((obj) => {
-          // if (
           return obj.title.toLowerCase().includes(e.target.value.toLowerCase());
-          // ) {
-          // return obj;
-          // }
         });
       }
     }
@@ -41,16 +37,14 @@ const Navs = () => {
     setSearchVal("");
   };
 
-  console.log("skata");
-
   return (
     <header>
       <div className={styles.searchDiv}>
         <input value={searchVal} onChange={searchHandler} type="text" />
         <img src={fakos} alt="search" />
-        <div className={styles.searchIn}>
-          {searchVal &&
-            searchIn.map((item, index) => {
+        {searchVal && (
+          <div className={styles.searchIn}>
+            {searchIn.map((item, index) => {
               return (
                 <Link
                   onClick={deleteHandler}
@@ -61,7 +55,8 @@ const Navs = () => {
                 </Link>
               );
             })}
-        </div>
+          </div>
+        )}
       </div>
 
       <aside className={styles.aside}>

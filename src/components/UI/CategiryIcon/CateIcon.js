@@ -3,21 +3,16 @@ import browserIcon from "../../../icons/browser.png";
 import styles from "./CateIcon.module.css";
 
 const CateIcon = (props) => {
+  let imge = iconPc;
   if (props.platform.startsWith("Web")) {
-    // console.log(props.platform);
-    return (
-      <div className={styles["cate_icon_cont"]}>
-        <img src={browserIcon} alt="web" />
-      </div>
-    );
+    imge = browserIcon;
   }
-  if (props.platform.startsWith("PC")) {
-    return (
-      <div className={styles["cate_icon_cont"]}>
-        <img src={iconPc} alt="pc" />
-      </div>
-    );
-  }
+
+  return (
+    <div className={styles["cate_icon_cont"]}>
+      <img src={imge} alt="web" />
+    </div>
+  );
 };
 
 export default CateIcon;

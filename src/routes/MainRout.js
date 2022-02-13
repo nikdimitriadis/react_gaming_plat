@@ -14,6 +14,7 @@ const MainRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/allg" element={<AllGames />} />
         <Route path="/recenadd" element={<Recently />} />
+        {/* all web or pc  games*/}
         <Route path="/showmore/:cat" element={<ShowMore />} />
         <Route path="/allg/:id" element={<Details />} />
         <Route path="*" element={<NotFound />} />
