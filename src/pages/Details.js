@@ -39,7 +39,7 @@ const Details = () => {
     } catch (e) {
       setIsLoading(false);
       setError(e.message);
-      console.error(e);
+      // console.error(e);
     }
 
     setIsLoading(false);
@@ -49,14 +49,13 @@ const Details = () => {
 
   if (isLoaded) {
     content = <p>Loading...</p>;
-    console.log("1");
   }
 
   if (error) {
     content = <p>{error.message}</p>;
   }
 
-  const dataFromApi = fetchedData ?? {};
+  const dataFromApi = fetchedData;
 
   let platInf = true;
   // ! edw exw thema me tin ikona tha mporousa na exw 2 tetoia
@@ -175,13 +174,19 @@ const Details = () => {
         </PCard>
       </article>
     );
-
-    //   if (dataFromApi.screenshots === undefined) {
-    //     throw new Error();
-    //   }
-    // } catch (e) {
-    //   console.log(e);
-    // }
+  } else {
+    content = (
+      <p
+        style={{
+          textAlign: "center",
+          position: "absolute",
+          top: "45%",
+          left: "45%",
+        }}
+      >
+        cant find that game
+      </p>
+    );
   }
 
   useEffect(() => {

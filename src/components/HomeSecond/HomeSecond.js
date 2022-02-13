@@ -20,31 +20,25 @@ const HomeSecond = () => {
   if (fetchCtx.error) {
     content = <p>{fetchCtx.error}</p>;
   }
-  const dataFromApi = fetchCtx?.fetchedData ?? {};
+  const dataFromApi = fetchCtx?.fetchedData;
 
   if (dataFromApi.length > 0) {
-    content = Object.keys(dataFromApi)?.filter((item) => {
-      // if (
+    content = dataFromApi.filter((item) => {
       return (
-        dataFromApi[item].platform.startsWith("PC") &&
-        dataFromApi[item].release_date.startsWith("2021")
+        item.platform.startsWith("PC") && item.release_date.startsWith("2021")
       );
-      // ) {
-      // return item;
-      // }
     });
 
     bigContent = content.slice(0, 1).map((item, index) => {
-      // console.log(dataFromApi[item]);
       return (
         <SecondCardBig
-          key={dataFromApi[item].id}
-          title={dataFromApi[item].title}
-          genre={dataFromApi[item].genre}
-          platform={dataFromApi[item].platform}
-          url={dataFromApi[item].thumbnail}
+          key={item.id}
+          title={item.title}
+          genre={item.genre}
+          platform={item.platform}
+          url={item.thumbnail}
           number={`${index + 1}`}
-          path={dataFromApi[item].id}
+          path={item.id}
         />
       );
     });
@@ -53,13 +47,13 @@ const HomeSecond = () => {
       return (
         <SecondCard
           number={`${index + 2} `}
-          path={dataFromApi[item].id}
-          key={dataFromApi[item].id}
-          url={dataFromApi[item].thumbnail}
-          title={dataFromApi[item].title}
-          genre={dataFromApi[item].genre}
-          platform={dataFromApi[item].platform}
-          description={dataFromApi[item].short_description}
+          path={item.id}
+          key={item.id}
+          url={item.thumbnail}
+          title={item.title}
+          genre={item.genre}
+          platform={item.platform}
+          description={item.short_description}
         />
       );
     });

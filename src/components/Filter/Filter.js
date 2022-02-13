@@ -11,26 +11,17 @@ const Filter = (props) => {
   const isFilteringSecond = queryParams.get("category");
   const isFilteringSort = queryParams.get("sort");
 
-  // const [plat, setPlat] = useState("");
-  // const [cat, setCat] = useState("");
-  // const [sSort, setSsort] = useState("");
-
-  // const [error, setError] = useState(null);
-  // const [isLoaded, setIsLoading] = useState(false);
   const [fetchedData, setFetchedData] = useState([]);
 
   const platflorHandler = (e) => {
-    // setPlat(e);
     test(e, isFilteringSecond, isFilteringSort);
   };
 
   const catHandler = (e) => {
-    // setCat(e);
     test(isFiltering, e, isFilteringSort);
   };
 
   const sortHandler = (e) => {
-    // setSsort(e);
     test(isFiltering, isFilteringSecond, e);
   };
 
@@ -84,8 +75,6 @@ const Filter = (props) => {
     if (c) {
       thirdSort = "&" + c;
     }
-    // setIsLoading(true);
-    // setError(null);
 
     try {
       const response = await fetch(
@@ -112,8 +101,6 @@ const Filter = (props) => {
       // setError(e.message);
       // console.error(e);
     }
-
-    // setIsLoading(false);
   }, []);
 
   useEffect(() => {

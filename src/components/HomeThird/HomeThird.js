@@ -19,30 +19,25 @@ const HomeThird = () => {
   if (fetchCtx.error) {
     content = <p>{fetchCtx.error}</p>;
   }
-  const dataFromApi = fetchCtx?.fetchedData ?? {};
+  const dataFromApi = fetchCtx.fetchedData;
 
-  content = Object.keys(dataFromApi)
-    ?.filter((item) => {
-      // if
+  content = dataFromApi
+    .filter((item) => {
       return (
-        dataFromApi[item].platform.startsWith("Web") &&
-        dataFromApi[item].release_date.startsWith("201")
+        item.platform.startsWith("Web") && item.release_date.startsWith("201")
       );
-      //  {
-      //   return item;
-      // }
     })
     .reverse()
     .slice(0, 4)
     .map((item) => {
       return (
         <ThirdCard
-          path={dataFromApi[item].id}
-          key={dataFromApi[item].id}
-          url={dataFromApi[item].thumbnail}
-          title={dataFromApi[item].title}
-          genre={dataFromApi[item].genre}
-          platform={dataFromApi[item].platform}
+          path={item.id}
+          key={item.id}
+          url={item.thumbnail}
+          title={item.title}
+          genre={item.genre}
+          platform={item.platform}
         />
       );
     });
